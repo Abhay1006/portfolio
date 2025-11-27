@@ -16,7 +16,7 @@
     "react-vertical-timeline-component": "^3.6.0",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://abhay1006.github.io/portfolio",
+  "homepage": ".",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
