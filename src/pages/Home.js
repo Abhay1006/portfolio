@@ -53,7 +53,7 @@ function Home() {
           </li>
           <li className="item">
             <h2>Languages</h2>
-            <span>C, C++, Python, JavaScript, Java</span>
+            <span>C, C++, Python, JavaScript, Java, GOLANG</span>
           </li>
         </ol>
       </div>
