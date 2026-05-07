@@ -19,6 +19,6 @@ export const projectList = [
         image: 'talkify.png',
         skills: 'React.js,Node.js,Socket.io,Express.js,MongoDB,Render',
         github: 'https://github.com/Abhay1006/talkify',
-        hosted: 'https://talkify-etjd.onrender.com/',
+        hosted: 'https://chat.oniichad.com',
     },
 ]
