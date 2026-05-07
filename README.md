@@ -1,1 +1,1 @@
-hosting website- https://abhaypratap.netlify.app/
+hosting website- portfolio.oniichad.com
