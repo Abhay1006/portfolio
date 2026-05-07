@@ -1,45 +1,24 @@
 
 export const projectList = [
     {
-        name: 'Yolo website',
-        image: 'yolo.png',
-        skills: 'React.js,Python,Machine Learning,Node.js,ExpressJs',
-        link: 'https://github.com/Abhay1006/yolo-website',
-    },
-    {
-        name: 'Robin Hood',
-        image: 'robin.png',
-        skills: 'React.js,Node.js,Express.js,Google Maps',
-        link: 'https://robinhood-petshop.netlify.app/',
-    },
-    {
-        name: 'Text Editor',
-        image: 'editor.png',
-        skills: 'React.js,Node.js,ExpressJs',
-        link: 'https://github.com/Abhay1006/text-editor',
-    },
-    {
-        name: 'Color change',
-        image: 'color.png',
-        skills: 'React.js,Node.js,ExpressJs',
-        link: 'https://color-change-game.netlify.app/',
-    },
-    {
         name: 'CabPool',
         image: 'cabpool.png',
-        skills: 'Node.js,Express.js,MongoDB',
-        link: 'https://github.com/talanayush/CabPool',
+        skills: 'Node.js,Express.js,MongoDB,React.js,Tailwind CSS',
+        github: 'https://github.com/talanayush/CabPool',
+        hosted: 'https://cab-pool1-frontend.vercel.app/',
     },
     {
         name: 'SignLingo',
         image: 'signlingo.png',
-        skills: 'Python,Machine Learning,React.js,Flask',
-        link: 'https://github.com/Abhay1006/SignLingo',
+        skills: 'Python,Machine Learning,PyTorch,Tkinter',
+        github: 'https://github.com/Abhay1006/SignLingo',
+        hosted: null,
     },
     {
         name: 'Talkify',
         image: 'talkify.png',
-        skills: 'React.js,Node.js,Socket.io,Encryption',
-        link: 'https://github.com/Abhay1006/talkify',
+        skills: 'React.js,Node.js,Socket.io,Express.js,MongoDB,Render',
+        github: 'https://github.com/Abhay1006/talkify',
+        hosted: 'https://talkify-etjd.onrender.com/',
     },
 ]
