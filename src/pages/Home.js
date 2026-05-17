@@ -2,6 +2,7 @@ import React from "react";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
 import GithubIcon from "@mui/icons-material/GitHub";
+import BookIcon from "@mui/icons-material/Book";
 import { Container, Typography, Box, IconButton, Paper, Grid, Button, Stack } from '@mui/material';
 import DownloadIcon from '@mui/icons-material/Download';
 
@@ -44,6 +45,13 @@ function Home() {
               sx={{ color: 'white' }}
             >
               <GithubIcon fontSize="large" />
+            </IconButton>
+            <IconButton 
+              href="https://blogs.oniichad.com" 
+              target="_blank" 
+              sx={{ color: 'white' }}
+            >
+              <BookIcon fontSize="large" />
             </IconButton>
           </Stack>
           <Button
