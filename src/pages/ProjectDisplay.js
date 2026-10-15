@@ -29,6 +29,11 @@ function ProjectDisplay() {
                         mb: 4 
                     }} 
                 />
+                {project.description && (
+                    <Typography variant="body1" sx={{ mb: 4, maxWidth: 600, textAlign: 'center', fontSize: '1.1rem', lineHeight: 1.7 }}>
+                        {project.description}
+                    </Typography>
+                )}
                 <Box sx={{ mb: 4, textAlign: 'center' }}>
                     <Typography variant="h6" gutterBottom sx={{ fontWeight: '600' }}>
                         Skills

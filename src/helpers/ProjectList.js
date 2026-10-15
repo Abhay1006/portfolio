@@ -1,8 +1,48 @@
-
 export const projectList = [
+    {
+        name: 'Talkify',
+        image: 'talkify.png',
+        description: 'A real-time chat app with instant messaging, online status and a persistent chat history. Built on Socket.io, with a React and Zustand frontend and a Node/Express and MongoDB backend.',
+        skills: 'React.js,Zustand,Node.js,Socket.io,Express.js,MongoDB',
+        github: 'https://github.com/Abhay1006/talkify',
+        hosted: 'https://chats.oniichad.com/',
+    },
+    {
+        name: 'Lumina',
+        image: 'lumina.png',
+        description: 'A blogging platform with a Go backend and a React/TypeScript frontend. It includes an admin dashboard for writing posts, Markdown with LaTeX math, nested comments, live likes and dislikes, and JWT login. It is self-hosted and powers my own blog.',
+        skills: 'Go,React.js,TypeScript,Material UI,TanStack Query,JWT',
+        github: 'https://github.com/Abhay1006/blogging',
+        hosted: 'https://blog.oniichad.com',
+    },
+    {
+        name: 'Lexicon',
+        image: 'lexicon.png',
+        description: 'A Duolingo-style app for learning the Kannada, Japanese and German scripts. It teaches characters lesson by lesson, with tracing, matching and recall exercises, and then builds reading vocabulary from real texts. It runs on a small Node server and works from a phone.',
+        skills: 'Node.js,JavaScript,HTML,CSS',
+        github: 'https://github.com/Abhay1006/lexicon-jp-gr',
+        hosted: 'https://lexicon.rgbored.com',
+    },
+    {
+        name: 'MacNotch',
+        image: 'macnotch.png',
+        description: 'A native Swift/SwiftUI app that turns the MacBook camera notch into an interactive "Dynamic Island". It shows music controls, live football scores, a focus timer, and battery, CPU and RAM meters, and hides behind the notch when not in use.',
+        skills: 'Swift,SwiftUI,macOS',
+        github: 'https://github.com/Abhay1006/MacNotch',
+        hosted: null,
+    },
+    {
+        name: 'lazymusic',
+        image: 'lazymusic.png',
+        description: 'A lazygit-style terminal app for Apple Music. Browse playlists, search your library, queue songs, read synced lyrics and view album art, all from the keyboard. Pure Python with no other dependencies.',
+        skills: 'Python,AppleScript,Terminal UI',
+        github: 'https://github.com/Abhay1006/lazymusic',
+        hosted: null,
+    },
     {
         name: 'CabPool',
         image: 'cabpool.png',
+        description: 'A cab-pooling web app for college students travelling between the Sector 62 and Sector 128 campuses. It replaced a WhatsApp group: students create and join ride tickets, expired rides clear themselves, and fares are split through UPI.',
         skills: 'Node.js,Express.js,MongoDB,React.js,Tailwind CSS',
         github: 'https://github.com/talanayush/CabPool',
         hosted: 'https://cab-pool1-frontend.vercel.app/',
@@ -10,15 +50,9 @@ export const projectList = [
     {
         name: 'SignLingo',
         image: 'signlingo.png',
+        description: 'A real-time sign language translator that reads gestures from a webcam and turns them into text. It uses a MobileNetV2 model fine-tuned with PyTorch and a Tkinter interface.',
         skills: 'Python,Machine Learning,PyTorch,Tkinter',
         github: 'https://github.com/Abhay1006/SignLingo',
         hosted: null,
-    },
-    {
-        name: 'Talkify',
-        image: 'talkify.png',
-        skills: 'React.js,Node.js,Socket.io,Express.js,MongoDB,Render',
-        github: 'https://github.com/Abhay1006/talkify',
-        hosted: 'https://chat.oniichad.com',
     },
 ]

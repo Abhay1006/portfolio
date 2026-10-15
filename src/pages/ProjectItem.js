@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Card, CardActionArea, CardContent, CardMedia, Typography } from "@mui/material";
 
-function ProjectItem({ image, name, id }) {
+function ProjectItem({ image, name, description, id }) {
   const navigate = useNavigate();
   return (
     <Card 
@@ -17,7 +17,10 @@ function ProjectItem({ image, name, id }) {
         }
       }}
     >
-      <CardActionArea onClick={() => navigate("/project/" + id)} sx={{ height: '100%' }}>
+      <CardActionArea
+        onClick={() => navigate("/project/" + id)}
+        sx={{ height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'stretch', justifyContent: 'flex-start' }}
+      >
         <CardMedia
           component="img"
           height="200"
@@ -28,6 +31,21 @@ function ProjectItem({ image, name, id }) {
           <Typography gutterBottom variant="h5" component="div" align="center" sx={{ fontWeight: 'bold', color: '#3e497a' }}>
             {name}
           </Typography>
+          {description && (
+            <Typography
+              variant="body2"
+              color="text.secondary"
+              align="center"
+              sx={{
+                display: '-webkit-box',
+                WebkitLineClamp: 3,
+                WebkitBoxOrient: 'vertical',
+                overflow: 'hidden',
+              }}
+            >
+              {description}
+            </Typography>
+          )}
         </CardContent>
       </CardActionArea>
     </Card>

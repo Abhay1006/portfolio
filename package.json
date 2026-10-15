@@ -19,7 +19,7 @@
     "web-vitals": "^2.1.4",
     "yup": "^1.7.1"
   },
-  "homepage": ".",
+  "homepage": "/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
