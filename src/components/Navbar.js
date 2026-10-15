@@ -2,16 +2,27 @@ import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import "../styles/Navbar.css"
 import ReorderIcon from "@mui/icons-material/Reorder"
+import DarkModeIcon from "@mui/icons-material/DarkMode"
+import LightModeIcon from "@mui/icons-material/LightMode"
+import { useColorMode } from "../helpers/theme"
 function Navbar() {
   const [expandNavbar, setExpandNavbar]= useState(false);
 
   const location=useLocation();
+  const { mode, toggleColorMode } = useColorMode();
   
   useEffect(()=>{
     setExpandNavbar(false);
   },[location]);
   return (
     <div className='navbar' id={expandNavbar ? "open":"close"}>
+      <button
+        className='themeToggle'
+        onClick={toggleColorMode}
+        aria-label={mode === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+      >
+        {mode === 'dark' ? <LightModeIcon /> : <DarkModeIcon />}
+      </button>
       <div className='toggleButton'>
       <button 
       onClick={()=> {

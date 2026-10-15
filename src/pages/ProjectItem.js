@@ -28,7 +28,7 @@ function ProjectItem({ image, name, description, id }) {
           alt={name}
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div" align="center" sx={{ fontWeight: 'bold', color: '#3e497a' }}>
+          <Typography gutterBottom variant="h5" component="div" align="center" sx={{ fontWeight: 'bold', color: 'primary.main' }}>
             {name}
           </Typography>
           {description && (

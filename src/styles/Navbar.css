@@ -86,3 +86,25 @@
       flex-direction: row;
     }
   }
+.navbar {
+  position: relative;
+}
+.themeToggle {
+  position: absolute;
+  top: 32px;
+  right: 24px;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 1;
+}
+.themeToggle svg {
+  font-size: 32px;
+}
+@media only screen and (max-width: 600px) {
+  .themeToggle {
+    right: auto;
+    left: 20px;
+  }
+}

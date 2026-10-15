@@ -3,11 +3,24 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#21325e" />
     <meta
       name="description"
-      content="Abhay Pratap Singh — software developer. Projects, experience, resume and blog."
+      content="Abhay Pratap Singh: software developer and Head of DSA at CodeChef. Projects, experience, resume and blog."
     />
+    <link rel="canonical" href="https://portfolio.oniichad.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://portfolio.oniichad.com/" />
+    <meta property="og:title" content="Abhay Pratap Singh | Software Developer" />
+    <meta property="og:description" content="Abhay Pratap Singh: software developer and Head of DSA at CodeChef. Projects, experience, resume and blog." />
+    <meta property="og:image" content="https://portfolio.oniichad.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@AbhayPrSi" />
+    <meta name="twitter:title" content="Abhay Pratap Singh | Software Developer" />
+    <meta name="twitter:description" content="Abhay Pratap Singh: software developer and Head of DSA at CodeChef. Projects, experience, resume and blog." />
+    <meta name="twitter:image" content="https://portfolio.oniichad.com/og-image.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -27,6 +40,12 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <!-- Lets Netlify detect the contact form at deploy time; the React form posts to it -->
+    <form name="contact" data-netlify="true" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

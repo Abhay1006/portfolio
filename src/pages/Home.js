@@ -5,8 +5,16 @@ import GithubIcon from "@mui/icons-material/GitHub";
 import BookIcon from "@mui/icons-material/Book";
 import { Container, Typography, Box, IconButton, Paper, Grid, Button, Stack } from '@mui/material';
 import DownloadIcon from '@mui/icons-material/Download';
+import { Link as RouterLink } from 'react-router-dom';
+import ProjectItem from './ProjectItem';
+import { projectList } from '../helpers/ProjectList';
+import usePageTitle from '../helpers/usePageTitle';
+
+const FEATURED_COUNT = 3;
 
 function Home() {
+  usePageTitle();
+
   return (
     <Box>
       {/* Hero Section */}
@@ -23,7 +31,7 @@ function Home() {
             Hi, My name is Abhay
           </Typography>
           <Typography variant="h5" sx={{ mb: 4, opacity: 0.9 }}>
-            A software developer with a passion for learning and problem solving.
+            Software developer and Head of DSA at CodeChef. I build full-stack web apps, macOS tools and terminal apps.
           </Typography>
           <Stack direction="row" spacing={2} justifyContent="center" sx={{ mb: 6 }}>
             <IconButton 
@@ -76,7 +84,7 @@ function Home() {
 
       {/* Skills Section */}
       <Container maxWidth="lg" sx={{ py: 10 }}>
-        <Typography variant="h2" align="center" gutterBottom sx={{ fontWeight: 'bold', color: '#3e497a', mb: 8 }}>
+        <Typography variant="h2" align="center" gutterBottom sx={{ fontWeight: 'bold', color: 'primary.main', mb: 8 }}>
           Skills
         </Typography>
         <Grid container spacing={4}>
@@ -84,17 +92,20 @@ function Home() {
             { 
               title: "Front-End", 
               skills: "React.js, Next.js, HTML, CSS, Bootstrap, Tailwind CSS",
-              color: "#e3f2fd"
+              color: "#e3f2fd",
+              darkColor: "#1a2733"
             },
             { 
               title: "Back-End", 
               skills: "Node.js, Express.js, NestJS, MySQL, PostgreSQL, MongoDB, Prisma, Docker",
-              color: "#f3e5f5"
+              color: "#f3e5f5",
+              darkColor: "#2a1f2d"
             },
             { 
               title: "Languages", 
               skills: "C, C++, Python, JavaScript, Java, Go",
-              color: "#e8f5e9"
+              color: "#e8f5e9",
+              darkColor: "#1c2a1e"
             }
           ].map((item, index) => (
             <Grid item xs={12} md={4} key={index}>
@@ -104,12 +115,12 @@ function Home() {
                   p: 4, 
                   height: '100%', 
                   textAlign: 'center',
-                  backgroundColor: item.color,
+                  backgroundColor: (theme) => theme.palette.mode === 'dark' ? item.darkColor : item.color,
                   transition: '0.3s',
                   '&:hover': { transform: 'translateY(-10px)' }
                 }}
               >
-                <Typography variant="h4" gutterBottom sx={{ fontWeight: 'bold', color: '#3e497a' }}>
+                <Typography variant="h4" gutterBottom sx={{ fontWeight: 'bold', color: 'primary.main' }}>
                   {item.title}
                 </Typography>
                 <Typography variant="body1">
@@ -120,6 +131,27 @@ function Home() {
           ))}
         </Grid>
       </Container>
+
+      {/* Featured Projects */}
+      <Box sx={{ py: 10, backgroundColor: 'background.section' }}>
+        <Container maxWidth="lg">
+          <Typography variant="h2" align="center" gutterBottom sx={{ fontWeight: 'bold', color: 'primary.main', mb: 8 }}>
+            Featured Projects
+          </Typography>
+          <Grid container spacing={4}>
+            {projectList.slice(0, FEATURED_COUNT).map((project, idx) => (
+              <Grid item key={idx} xs={12} sm={6} md={4}>
+                <ProjectItem id={idx} name={project.name} image={project.image} description={project.description} />
+              </Grid>
+            ))}
+          </Grid>
+          <Box sx={{ textAlign: 'center', mt: 6 }}>
+            <Button component={RouterLink} to="/projects" variant="outlined" size="large" sx={{ borderRadius: '25px', px: 4 }}>
+              View all projects
+            </Button>
+          </Box>
+        </Container>
+      </Box>
     </Box>
   );
 }

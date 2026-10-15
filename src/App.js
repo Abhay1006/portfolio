@@ -8,11 +8,18 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ProjectDisplay from './pages/ProjectDisplay';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { CssBaseline, ThemeProvider } from '@mui/material';
+import { ColorModeContext, useColorModeState } from './helpers/theme';
 
 const queryClient = new QueryClient();
 
 function App() {
+  const { mode, theme, toggleColorMode } = useColorModeState();
+
   return (
+    <ColorModeContext.Provider value={{ mode, toggleColorMode }}>
+    <ThemeProvider theme={theme}>
+    <CssBaseline />
     <QueryClientProvider client={queryClient}>
       <div className="App">
         <Router>
@@ -28,6 +35,8 @@ function App() {
         </Router>
       </div>
     </QueryClientProvider>
+    </ThemeProvider>
+    </ColorModeContext.Provider>
   );
 }
 

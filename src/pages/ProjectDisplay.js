@@ -4,17 +4,19 @@ import { projectList } from '../helpers/ProjectList';
 import GithubIcon from "@mui/icons-material/GitHub"
 import LaunchIcon from "@mui/icons-material/Launch"
 import { Container, Typography, Box, Button, Stack, Chip } from '@mui/material';
+import usePageTitle from '../helpers/usePageTitle';
 
 function ProjectDisplay() {
     const { id } = useParams();
     const project = projectList[id];
+    usePageTitle(project ? project.name : 'Project not found');
 
     if (!project) return <Typography variant="h5">Project not found</Typography>;
 
     return (
         <Container maxWidth="md" sx={{ py: 8 }}>
             <Box display="flex" flexDirection="column" alignItems="center">
-                <Typography variant="h2" gutterBottom sx={{ fontWeight: 'bold', color: '#3e497a' }}>
+                <Typography variant="h2" gutterBottom sx={{ fontWeight: 'bold', color: 'primary.main' }}>
                     {project.name}
                 </Typography>
                 <Box 
@@ -50,7 +52,6 @@ function ProjectDisplay() {
                         startIcon={<GithubIcon />} 
                         href={project.github} 
                         target="_blank"
-                        sx={{ backgroundColor: '#3e497a' }}
                     >
                         View Repository
                     </Button>

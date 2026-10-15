@@ -2,10 +2,13 @@ import React from 'react'
 import ProjectItem from './ProjectItem'
 import { projectList } from '../helpers/ProjectList.js'
 import { Container, Typography, Grid, Box } from '@mui/material'
+import usePageTitle from '../helpers/usePageTitle'
 
 function Projects() {
+  usePageTitle('Projects')
+
   return (
-    <Box sx={{ py: 8, backgroundColor: '#f5f5f5', minHeight: '80vh' }}>
+    <Box sx={{ py: 8, backgroundColor: 'background.section', minHeight: '80vh' }}>
       <Container maxWidth="lg">
         <Typography 
           variant="h2" 
@@ -13,7 +16,7 @@ function Projects() {
           gutterBottom 
           sx={{ 
             fontWeight: 'bold', 
-            color: '#3e497a',
+            color: 'primary.main',
             mb: 6 
           }}
         >

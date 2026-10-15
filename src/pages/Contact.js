@@ -4,18 +4,22 @@ import * as Yup from 'yup';
 import { useMutation } from '@tanstack/react-query';
 import { Container, Typography, TextField, Button, Box, Alert, CircularProgress } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
+import usePageTitle from '../helpers/usePageTitle';
 
-// Simulated API call
+// Netlify Forms picks up submissions to "/" for the static "contact" form in public/index.html
 const submitContactForm = async (values) => {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      console.log('Form Submitted:', values);
-      resolve({ success: true });
-    }, 2000);
+  const response = await fetch('/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams({ 'form-name': 'contact', ...values }).toString(),
   });
+  if (!response.ok) {
+    throw new Error(`Form submission failed with status ${response.status}`);
+  }
 };
 
 function Contact() {
+  usePageTitle('Contact');
   const mutation = useMutation({
     mutationFn: submitContactForm,
   });
@@ -31,14 +35,14 @@ function Contact() {
       email: Yup.string().email('Invalid email address').required('Required'),
       message: Yup.string().min(10, 'Must be at least 10 characters').required('Required'),
     }),
-    onSubmit: (values) => {
-      mutation.mutate(values);
+    onSubmit: (values, { resetForm }) => {
+      mutation.mutate(values, { onSuccess: () => resetForm() });
     },
   });
 
   return (
     <Container maxWidth="sm" sx={{ py: 8 }}>
-      <Typography variant="h2" align="center" gutterBottom sx={{ fontWeight: 'bold', color: '#3e497a' }}>
+      <Typography variant="h2" align="center" gutterBottom sx={{ fontWeight: 'bold', color: 'primary.main' }}>
         Contact Me
       </Typography>
       <Typography variant="body1" align="center" sx={{ mb: 4 }}>
@@ -101,7 +105,7 @@ function Contact() {
           size="large"
           disabled={mutation.isPending}
           startIcon={mutation.isPending ? <CircularProgress size={20} /> : <SendIcon />}
-          sx={{ backgroundColor: '#3e497a', py: 1.5 }}
+          sx={{ py: 1.5 }}
         >
           {mutation.isPending ? 'Sending...' : 'Send Message'}
         </Button>
