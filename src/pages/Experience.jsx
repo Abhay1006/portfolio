@@ -7,7 +7,7 @@ import "react-vertical-timeline-component/style.min.css"
 import SchoolIcon from "@mui/icons-material/School"
 import WorkIcon from "@mui/icons-material/Work"
 import { EmojiEvents } from '@mui/icons-material';
-import { Container, Typography, Box, useTheme } from '@mui/material';
+import { Container, Typography, Box, Link, useTheme } from '@mui/material';
 import usePageTitle from '../helpers/usePageTitle';
 
 function Experience() {
@@ -103,7 +103,11 @@ function Experience() {
               Content Team Head, North Region
             </Typography>
             <Typography variant="body2">
-              Started DSA Mondays on CodeChef.
+              Started{' '}
+              <Link href="https://www.codechef.com/DSAMONDAY020" target="_blank" rel="noopener noreferrer">
+                DSA Mondays
+              </Link>{' '}
+              on CodeChef.
             </Typography>
             <Typography variant="body2">
               Previously SDET and Learning Content Associate, working on Node.js DSA questions, Flask, and educational content.
