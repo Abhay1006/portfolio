@@ -24,7 +24,7 @@ function Projects() {
         </Typography>
         <Grid container spacing={4}>
           {projectList.map((project, idx) => (
-            <Grid item key={idx} xs={12} sm={6} md={4}>
+            <Grid key={idx} size={{ xs: 12, sm: 6, md: 4 }}>
               <ProjectItem id={idx} name={project.name} image={project.image} description={project.description} />
             </Grid>
           ))}

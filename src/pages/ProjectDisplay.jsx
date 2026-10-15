@@ -15,7 +15,7 @@ function ProjectDisplay() {
 
     return (
         <Container maxWidth="md" sx={{ py: 8 }}>
-            <Box display="flex" flexDirection="column" alignItems="center">
+            <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                 <Typography variant="h2" gutterBottom sx={{ fontWeight: 'bold', color: 'primary.main' }}>
                     {project.name}
                 </Typography>
@@ -40,7 +40,7 @@ function ProjectDisplay() {
                     <Typography variant="h6" gutterBottom sx={{ fontWeight: '600' }}>
                         Skills
                     </Typography>
-                    <Stack direction="row" spacing={1} justifyContent="center" flexWrap="wrap" useFlexGap>
+                    <Stack direction="row" spacing={1} useFlexGap sx={{ justifyContent: 'center', flexWrap: 'wrap' }}>
                         {project.skills.split(',').map((skill, index) => (
                             <Chip key={index} label={skill.trim()} color="primary" variant="outlined" />
                         ))}

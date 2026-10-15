@@ -17,17 +17,20 @@ My personal portfolio: projects, experience, resume and a contact form.
 
 ## Tech stack
 
-- React 18 with React Router
-- Material UI and Emotion
+- React 19 with React Router 7, built with Vite
+- Material UI 9 and Emotion
 - Formik, Yup and TanStack Query for the contact form
 - Hosted on Netlify
 
 ## Running locally
 
+Requires Node 22 (see `.nvmrc`).
+
 ```bash
 npm install
-npm start        # dev server on http://localhost:3000
-npm run build    # production build in build/
+npm start         # Vite dev server on http://localhost:3000
+npm run build     # production build in build/
+npm run preview   # serve the production build locally
 ```
 
 The contact form only delivers messages on Netlify. Locally, submitting it shows an error because there's no form endpoint.

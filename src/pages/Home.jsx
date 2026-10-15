@@ -33,7 +33,7 @@ function Home() {
           <Typography variant="h5" sx={{ mb: 4, opacity: 0.9 }}>
             Software developer and Head of DSA at CodeChef. I build full-stack web apps, macOS tools and terminal apps.
           </Typography>
-          <Stack direction="row" spacing={2} justifyContent="center" sx={{ mb: 6 }}>
+          <Stack direction="row" spacing={2} sx={{ justifyContent: 'center', mb: 6 }}>
             <IconButton 
               href="https://www.linkedin.com/in/abhay-pratap-singh1006/" 
               target="_blank" 
@@ -108,7 +108,7 @@ function Home() {
               darkColor: "#1c2a1e"
             }
           ].map((item, index) => (
-            <Grid item xs={12} md={4} key={index}>
+            <Grid size={{ xs: 12, md: 4 }} key={index}>
               <Paper 
                 elevation={3} 
                 sx={{ 
@@ -140,7 +140,7 @@ function Home() {
           </Typography>
           <Grid container spacing={4}>
             {projectList.slice(0, FEATURED_COUNT).map((project, idx) => (
-              <Grid item key={idx} xs={12} sm={6} md={4}>
+              <Grid key={idx} size={{ xs: 12, sm: 6, md: 4 }}>
                 <ProjectItem id={idx} name={project.name} image={project.image} description={project.description} />
               </Grid>
             ))}
