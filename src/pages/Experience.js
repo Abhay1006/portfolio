@@ -82,10 +82,16 @@ function Experience() {
               CodeChef
             </Typography>
             <Typography variant="subtitle1" sx={{ color: '#3e497a' }}>
-              SDET and Learning Content Associate
+              Head of DSA
+            </Typography>
+            <Typography variant="subtitle1" sx={{ color: '#3e497a' }}>
+              Content Team Head, North Region
             </Typography>
             <Typography variant="body2">
-              Working on projects like Node.js DSA questions, Flask, and educational content.
+              Started DSA Mondays on CodeChef.
+            </Typography>
+            <Typography variant="body2">
+              Previously SDET and Learning Content Associate, working on Node.js DSA questions, Flask, and educational content.
             </Typography>
           </VerticalTimelineElement>
         </VerticalTimeline>
