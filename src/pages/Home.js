@@ -47,7 +47,7 @@ function Home() {
               <GithubIcon fontSize="large" />
             </IconButton>
             <IconButton 
-              href="https://blogs.oniichad.com" 
+              href="https://blog.oniichad.com" 
               target="_blank" 
               sx={{ color: 'white' }}
             >
@@ -83,17 +83,17 @@ function Home() {
           {[
             { 
               title: "Front-End", 
-              skills: "ReactJs, HTML, CSS, BootStrap, NestJs, TailwindCss",
+              skills: "React.js, Next.js, HTML, CSS, Bootstrap, Tailwind CSS",
               color: "#e3f2fd"
             },
             { 
               title: "Back-End", 
-              skills: "NodeJs, MySQL, Postgres, ExpressJs, NextJS, Docker, MongoDB, Prisma",
+              skills: "Node.js, Express.js, NestJS, MySQL, PostgreSQL, MongoDB, Prisma, Docker",
               color: "#f3e5f5"
             },
             { 
               title: "Languages", 
-              skills: "C, C++, Python, JavaScript, Java, GOLANG",
+              skills: "C, C++, Python, JavaScript, Java, Go",
               color: "#e8f5e9"
             }
           ].map((item, index) => (
