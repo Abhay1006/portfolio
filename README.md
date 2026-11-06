@@ -24,13 +24,13 @@ My personal portfolio: projects, experience, resume and a contact form.
 
 ## Running locally
 
-Requires Node 22 (see `.nvmrc`).
+Requires Node 22 (see `.nvmrc`) and pnpm (pinned by `packageManager` in `package.json`).
 
 ```bash
-npm install
-npm start         # Vite dev server on http://localhost:3000
-npm run build     # production build in build/
-npm run preview   # serve the production build locally
+pnpm install
+pnpm start         # Vite dev server on http://localhost:3000
+pnpm run build     # production build in build/
+pnpm run preview   # serve the production build locally
 ```
 
 The contact form only delivers messages on Netlify. Locally, submitting it shows an error because there's no form endpoint.
