@@ -55,4 +55,12 @@ export const projectList = [
         github: 'https://github.com/Abhay1006/SignLingo',
         hosted: null,
     },
+    {
+        name: 'termtype',
+        image: 'termtype.webp',
+        description: 'A minimal, fast typing test for the terminal written in Go with Bubble Tea and Lip Gloss. It features timed, word-count and quote modes, live WPM, a per-second WPM graph, personal bests saved locally, and custom themes.',
+        skills: 'Go,Bubble Tea,Lip Gloss,Terminal UI',
+        github: 'https://github.com/Abhay1006/termtype',
+        hosted: null,
+    },
 ]
